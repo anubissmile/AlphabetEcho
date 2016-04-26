@@ -8,29 +8,35 @@
     tools:context="com.roomscrumxyz.anubissmile.alphabetecho.MainActivity"
     tools:showIn="@layout/activity_main">
 
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageView"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/app_index_logo" />
+
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="LISTENING"
         android:id="@+id/listening_btn"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginLeft="15dp"
-        android:layout_marginRight="15dp"/>
+        android:layout_alignTop="@+id/spelling_btn"
+        android:layout_toLeftOf="@+id/spelling_btn"
+        android:layout_toStartOf="@+id/spelling_btn"
+        android:layout_marginRight="41dp"
+        android:layout_marginEnd="41dp" />
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="SPELLING"
         android:id="@+id/spelling_btn"
-        android:layout_below="@+id/listening_btn"
+        android:layout_marginRight="74dp"
+        android:layout_marginEnd="74dp"
+        android:layout_marginTop="54dp"
+        android:layout_alignParentTop="true"
         android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginLeft="15dp"
-        android:layout_marginRight="15dp"/>
+        android:layout_alignParentEnd="true" />
+
 
 
 </RelativeLayout>

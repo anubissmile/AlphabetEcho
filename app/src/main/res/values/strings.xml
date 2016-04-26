@@ -2,4 +2,6 @@
     <string name="app_name">AlphabetEcho</string>
     <string name="action_settings">Settings</string>
     <string name="action_settings2">Info</string>
+    <string name="spelling_btn">ฝึกการออกเสียง</string>
+    <string name="listening_btn">ฝึกการฟังพยัญชนะภาษาไทย</string>
 </resources>

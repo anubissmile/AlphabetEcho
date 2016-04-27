@@ -2,8 +2,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#0099cc"
-    tools:context="com.roomscrumxyz.anubissmile.alphabetecho.FullscreenActivity">
+    android:background="#e4e4e6"
+    tools:context="com.roomscrumxyz.anubissmile.alphabetecho.SplashActivity">
 
     <!-- The primary full-screen view. This can be replaced with whatever view
          is needed to present your content, e.g. VideoView, SurfaceView,
@@ -21,12 +21,10 @@
 
     <!-- This FrameLayout insets its children based on system windows using
          android:fitsSystemWindows. -->
-
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:fitsSystemWindows="true"
-        android:layout_gravity="center_horizontal|top">
+        android:fitsSystemWindows="true">
 
         <LinearLayout
             android:id="@+id/fullscreen_content_controls"
@@ -46,16 +44,15 @@
                 android:layout_weight="1"
                 android:text="@string/dummy_button" />
 
-            <Button
-                android:id="@+id/dummy_button2"
-                style="?metaButtonBarButtonStyle"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="CLOSE ME" />
-
         </LinearLayout>
 
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/logo_thai_flag"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/app_index_logo"
+            android:contentDescription="LOGO_THAILAND_FLAG" />
     </FrameLayout>
 
 </FrameLayout>

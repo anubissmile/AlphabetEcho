@@ -23,7 +23,7 @@
     <ImageButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/imageButton"
+        android:id="@+id/listening_btn"
         android:src="@drawable/listening_menu"
         android:layout_centerVertical="true"
         android:layout_centerHorizontal="true" />
@@ -31,11 +31,11 @@
     <ImageButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/imageButton2"
+        android:id="@+id/speek_out_btn"
         android:src="@drawable/speek_out_menu"
-        android:layout_above="@+id/imageButton"
-        android:layout_alignLeft="@+id/imageButton"
-        android:layout_alignStart="@+id/imageButton"
+        android:layout_above="@+id/listening_btn"
+        android:layout_alignLeft="@+id/listening_btn"
+        android:layout_alignStart="@+id/listening_btn"
         android:layout_marginBottom="45dp" />
 
 </RelativeLayout>

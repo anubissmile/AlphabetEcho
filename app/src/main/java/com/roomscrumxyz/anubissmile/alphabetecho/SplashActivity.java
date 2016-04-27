@@ -129,7 +129,7 @@ public class SplashActivity extends AppCompatActivity {
         new Thread() {
             public void run() {
                 try{
-                    Thread.sleep(7000);
+                    Thread.sleep(3500);
                     hRefresh.sendEmptyMessage(REFRESH_SCREEN);
                 }catch(Exception e){
                 }
@@ -143,7 +143,7 @@ public class SplashActivity extends AppCompatActivity {
                 case REFRESH_SCREEN:
 
                     // Open ActivityForm2
-                    Intent newActivity = new Intent(SplashActivity.this,MainActivity.class);
+                    Intent newActivity = new Intent(SplashActivity.this,FirstPage.class);
                     startActivity(newActivity);
                     SplashActivity.this.finish();
                     break;

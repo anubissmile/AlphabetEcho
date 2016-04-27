@@ -1,6 +1,7 @@
 package com.roomscrumxyz.anubissmile.alphabetecho;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
@@ -46,20 +47,29 @@ public class AlphabelListView extends AppCompatActivity {
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
 //                Toast.makeText(AlphabelListView.this,thStringArr[position] + " " + position,Toast.LENGTH_SHORT)
 //                        .show();
-                Intent newActivity;
+                final Intent newActivity;
                 switch(gotoActivity){
                     case 1:
                         newActivity = new Intent(AlphabelListView.this, ListeningTH.class);
-                        newActivity.putExtra("POSITION", position);
+                        newActivity.putExtra("POSITION_INDEX", position);
                         startActivity(newActivity);
                         break;
                     case 2:
                         newActivity = new Intent(AlphabelListView.this, GameSpeakTH.class);
-                        newActivity.putExtra("POSITION", position);
+                        newActivity.putExtra("POSITION_INDEX", position);
                         startActivity(newActivity);
                         break;
                     default:
-                        finish(); break;
+                        Snackbar.make(view,"มีบางอย่างผิดพลาด,เราต้องกลับไปหน้าเริ่มต้นใหม่",Snackbar.LENGTH_INDEFINITE)
+                                .setAction("OK", new View.OnClickListener() {
+                                    @Override
+                                    public void onClick(View v) {
+                                        AlphabelListView.this.onBackPressed();
+                                    }
+                                })
+                                .setActionTextColor(Color.RED)
+                                .show();
+                        break;
                 }
             }
         });

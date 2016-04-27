@@ -1,10 +1,8 @@
 package com.roomscrumxyz.anubissmile.alphabetecho;
 
-import android.content.Intent;
 import android.media.MediaPlayer;
 import android.net.Uri;
 import android.os.Bundle;
-import android.speech.RecognizerIntent;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
@@ -19,34 +17,7 @@ import com.google.android.gms.appindexing.Action;
 import com.google.android.gms.appindexing.AppIndex;
 import com.google.android.gms.common.api.GoogleApiClient;
 
-import java.util.ArrayList;
-
 public class MainActivity extends AppCompatActivity {
-
-    private final static int REQUEST_VOICE_RECOGNITION = 10001;
-
-    /**
-     * METHOD FOR GOOGLE SPEECH RECOGNIZER.
-     */
-    private void callVoiceRecognition(){
-        Intent intent = new Intent(RecognizerIntent.ACTION_RECOGNIZE_SPEECH);
-        intent.putExtra(RecognizerIntent.EXTRA_LANGUAGE, "th-TH");
-        startActivityForResult(intent, REQUEST_VOICE_RECOGNITION);
-    }
-
-    @Override
-    public void onActivityResult(int requestCode, int resultCode, Intent data){
-        super.onActivityResult(requestCode, resultCode, data);
-
-        if (requestCode == REQUEST_VOICE_RECOGNITION &&
-                resultCode == RESULT_OK &&
-                data != null) {
-            ArrayList<String> resultList = data.getStringArrayListExtra(RecognizerIntent.EXTRA_RESULTS);
-
-            Toast.makeText(MainActivity.this, resultList.get(0) , Toast.LENGTH_LONG).show();
-        }
-    }
-    //END OF GOOGLE_SPEECH_RECOGIZER'S METHOD.
 
     MediaPlayer mPlayer_th;
     /**
@@ -87,7 +58,8 @@ public class MainActivity extends AppCompatActivity {
         spelling_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(MainActivity.this, "ก.ไก่", Toast.LENGTH_LONG).show();
+                Snackbar.make(v, "Replace with your own action", Snackbar.LENGTH_LONG)
+                        .setAction("Action", null).show();
                 mPlayer_th.start();
             }
         });
@@ -99,9 +71,7 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public void onClick(View v) {
-                callVoiceRecognition();
-                Snackbar.make(v, "กำลังฟัง...", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
+                Toast.makeText(MainActivity.this, "Hi ", Toast.LENGTH_LONG).show();
             }
         });
 

@@ -11,7 +11,7 @@
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/imageView"
+        android:id="@+id/logo_thai_flag"
         android:layout_centerHorizontal="true"
         android:src="@drawable/app_index_logo"
         android:contentDescription="LOGO_THAILAND_FLAG" />

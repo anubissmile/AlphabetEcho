@@ -13,6 +13,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.google.android.gms.appindexing.Action;
@@ -64,6 +65,7 @@ public class MainActivity extends AppCompatActivity {
          */
         Button spelling_btn = (Button) findViewById(R.id.spelling_btn);
         Button listening_btn = (Button) findViewById(R.id.listening_btn);
+        ImageView logo_thai_flag = (ImageView) findViewById(R.id.logo_thai_flag);
 
         /**
          * MAKE OBJECT MEDIAPLAYER
@@ -100,6 +102,18 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 callVoiceRecognition();
+                Snackbar.make(v, "กำลังฟัง...", Snackbar.LENGTH_LONG)
+                        .setAction("Action", null).show();
+            }
+        });
+
+        /**
+         * LOGO_THAI_FLAG SET ONCLICK -> THEN MAKE TOAST
+         */
+        logo_thai_flag.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(MainActivity.this,"You Click the logo", Toast.LENGTH_LONG).show();
                 Snackbar.make(v, "กำลังฟัง...", Snackbar.LENGTH_LONG)
                         .setAction("Action", null).show();
             }

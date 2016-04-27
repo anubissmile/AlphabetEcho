@@ -34,7 +34,7 @@ public class FirstPage extends AppCompatActivity {
             public void onClick(View v) {
                 Snackbar.make(v, "ไปฟังการอ่าน...", Snackbar.LENGTH_SHORT)
                         .setAction("Action",null).show();
-                newActivity.putExtra("GOTO", "ListeningTH");
+                newActivity.putExtra("GOTO", 1);
                 startActivity(newActivity);
             }
         });
@@ -45,7 +45,7 @@ public class FirstPage extends AppCompatActivity {
             public void onClick(View v) {
                 Snackbar.make(v, "ไปฝึกการออกเสียงด้วยเกมส์กันเถอะ...", Snackbar.LENGTH_SHORT)
                         .setAction("Action",null).show();
-                newActivity.putExtra("GOTO", "GameSpeakTH");
+                newActivity.putExtra("GOTO", 2);
                 startActivity(newActivity);
             }
         });

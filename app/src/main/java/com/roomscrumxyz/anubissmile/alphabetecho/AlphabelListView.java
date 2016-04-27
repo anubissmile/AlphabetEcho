@@ -8,7 +8,6 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
-import android.widget.Toast;
 
 public class AlphabelListView extends AppCompatActivity {
 
@@ -19,8 +18,8 @@ public class AlphabelListView extends AppCompatActivity {
         /**
          * GET INTENT..
          */
-        Intent getIntent = getIntent();
-        final String gotoActivity = getIntent.getStringExtra("GOTO");
+        final Intent getIntent = getIntent();
+        final int gotoActivity = getIntent.getIntExtra("GOTO", 0);
 
         View getView = findViewById(R.id.thArrayList);
         Snackbar.make(getView,"โปรดเลือก ตัวอักษรที่คุณหนูๆต้องการ",Snackbar.LENGTH_LONG)
@@ -45,8 +44,23 @@ public class AlphabelListView extends AppCompatActivity {
         thArrList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                Toast.makeText(AlphabelListView.this,thStringArr[position] + " " + position,Toast.LENGTH_SHORT)
-                        .show();
+//                Toast.makeText(AlphabelListView.this,thStringArr[position] + " " + position,Toast.LENGTH_SHORT)
+//                        .show();
+                Intent newActivity;
+                switch(gotoActivity){
+                    case 1:
+                        newActivity = new Intent(AlphabelListView.this, ListeningTH.class);
+                        newActivity.putExtra("POSITION", position);
+                        startActivity(newActivity);
+                        break;
+                    case 2:
+                        newActivity = new Intent(AlphabelListView.this, GameSpeakTH.class);
+                        newActivity.putExtra("POSITION", position);
+                        startActivity(newActivity);
+                        break;
+                    default:
+                        finish(); break;
+                }
             }
         });
 

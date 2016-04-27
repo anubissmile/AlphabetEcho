@@ -4,4 +4,8 @@
     <string name="action_settings2">Info</string>
     <string name="spelling_btn">ฝึกการออกเสียง</string>
     <string name="listening_btn">ฝึกการฟังพยัญชนะภาษาไทย</string>
+    <string name="title_activity_main2">Main2Activity</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
 </resources>

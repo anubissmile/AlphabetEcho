@@ -12,4 +12,14 @@
     <string name="title_activity_splash">SplashActivity</string>
 
     <string name="title_activity_first_main">FirstMainActivity</string>
+
+    <string-array name="alphabet-th">
+        <item>ก.ไก่</item>
+        <item>ข.ไข่</item>
+        <item>ฃ.ฃวด</item>
+        <item>ค.ควาย</item>
+        <item>ฅ.ฅน</item>
+        <item>ฆ.ระฆัง</item>
+        <item>ง.งู</item>
+    </string-array>
 </resources>

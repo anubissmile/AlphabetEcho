@@ -7,8 +7,13 @@
     android:paddingLeft="0dp"
     android:paddingRight="0dp"
     android:paddingTop="0dp"
-    android:background="#7b7b9b"
-    tools:context="com.roomscrumxyz.anubissmile.alphabetecho.FirstPage">
+    tools:context="com.roomscrumxyz.anubissmile.alphabetecho.AlphabelListView">
+
+    <ListView
+        android:layout_width="wrap_content"
+        android:layout_height="400dp"
+        android:id="@+id/thArrayList"
+        android:layout_centerHorizontal="true" />
 
     <ImageView
         android:layout_width="match_parent"
@@ -20,23 +25,5 @@
         android:layout_alignParentBottom="true"
         android:foregroundGravity="bottom"
         android:layout_marginBottom="-370dp" />
-
-    <ImageButton
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/listening_btn"
-        android:src="@drawable/listening_menu"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="61dp" />
-
-    <ImageButton
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/speek_out_btn"
-        android:src="@drawable/speek_out_menu"
-        android:layout_centerVertical="true"
-        android:layout_alignLeft="@+id/listening_btn"
-        android:layout_alignStart="@+id/listening_btn" />
 
 </RelativeLayout>

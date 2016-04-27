@@ -13,7 +13,7 @@
 
     <string name="title_activity_first_main">FirstMainActivity</string>
 
-    <string-array name="alphabet-th">
+    <string-array name="alphabet_th">
         <item>ก.ไก่</item>
         <item>ข.ไข่</item>
         <item>ฃ.ฃวด</item>
@@ -21,5 +21,42 @@
         <item>ฅ.ฅน</item>
         <item>ฆ.ระฆัง</item>
         <item>ง.งู</item>
+        <item>จ.จาน</item>
+        <item>ฉ.ฉิ่ง</item>
+        <item>ช.ช้าง</item>
+        <item>ซ.โซ่</item>
+        <item>ณ.กะเฌอ</item>
+        <item>ญ.หญิง</item>
+        <item>ฎ.ชฎา</item>
+        <item>ฏ.ปฏัก</item>
+        <item>ฐ.ฐาน</item>
+        <item>ฑ.นางมณโฑ</item>
+        <item>ฒ.ผู้เฒ่า</item>
+        <item>ณ.เณร</item>
+        <item>ด.เด็ก</item>
+        <item>ต.เต่า</item>
+        <item>ถ.ถุง</item>
+        <item>ท.ทหาร</item>
+        <item>ธ.ธง</item>
+        <item>น.หนู</item>
+        <item>บ.ใบไม้</item>
+        <item>ป.ปลา</item>
+        <item>ผ.ผึ้ง</item>
+        <item>ฝ.ฝา</item>
+        <item>พ.พาน</item>
+        <item>ฟ.ฟัน</item>
+        <item>ภ.สำเภา</item>
+        <item>ม.ม้า</item>
+        <item>ย.ยักษ์</item>
+        <item>ร.เรือ</item>
+        <item>ล.ลิง</item>
+        <item>ว.แหวน</item>
+        <item>ศ.ศาลา</item>
+        <item>ษ.ฤาษี</item>
+        <item>ส.เสือ</item>
+        <item>ห.หีบ</item>
+        <item>ฬ.จุฬา</item>
+        <item>อ.อ่าง</item>
+        <item>ฮ.นกฮูก</item>
     </string-array>
 </resources>

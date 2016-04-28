@@ -59,4 +59,97 @@
         <item>อ.อ่าง</item>
         <item>ฮ.นกฮูก</item>
     </string-array>
+    
+    <string-array name="alphabet_th_speak">
+        <item>กอ ไก่</item>
+        <item>ขอ ไข่</item>
+        <item>ฃอ ฃวด</item>
+        <item>คอ ควาย</item>
+        <item>ฅอ ฅน</item>
+        <item>ฆอ ระฆัง</item>
+        <item>งอ งู</item>
+        <item>จอ จาน</item>
+        <item>ฉอ ฉิ่ง</item>
+        <item>ชอ ช้าง</item>
+        <item>ซอ โซ่</item>
+        <item>ณอ กะเฌอ</item>
+        <item>ญอ หญิง</item>
+        <item>ฎอ ชฎา</item>
+        <item>ฏอ ปฏัก</item>
+        <item>ฐอ ฐาน</item>
+        <item>ฑอ นางมณโฑ</item>
+        <item>ฒอ ผู้เฒ่า</item>
+        <item>ณอ เณร</item>
+        <item>ดอ เด็ก</item>
+        <item>ตอ เต่า</item>
+        <item>ถอ ถุง</item>
+        <item>ทอ ทหาร</item>
+        <item>ธอ ธง</item>
+        <item>นอ หนู</item>
+        <item>บอ ใบไม้</item>
+        <item>ปอ ปลา</item>
+        <item>ผอ ผึ้ง</item>
+        <item>ฝอ ฝา</item>
+        <item>พอ พาน</item>
+        <item>ฟอ ฟัน</item>
+        <item>ภอ สำเภา</item>
+        <item>มอ ม้า</item>
+        <item>ยอ ยักษ์</item>
+        <item>รอ เรือ</item>
+        <item>ลอ ลิง</item>
+        <item>วอ แหวน</item>
+        <item>ศอ ศาลา</item>
+        <item>ษอ ฤาษี</item>
+        <item>สอ เสือ</item>
+        <item>หอ หีบ</item>
+        <item>ฬอ จุฬา</item>
+        <item>ออ อ่าง</item>
+        <item>ฮอ นกฮูก</item>
+    </string-array>
+    <string-array name="alphabet_th_speak2">
+        <item>กอไก่</item>
+        <item>ขอไข่</item>
+        <item>ฃอฃวด</item>
+        <item>คอควาย</item>
+        <item>ฅอฅน</item>
+        <item>ฆอระฆัง</item>
+        <item>งองู</item>
+        <item>จอจาน</item>
+        <item>ฉอฉิ่ง</item>
+        <item>ชอช้าง</item>
+        <item>ซอโซ่</item>
+        <item>ณอกะเฌอ</item>
+        <item>ญอหญิง</item>
+        <item>ฎอชฎา</item>
+        <item>ฏอปฏัก</item>
+        <item>ฐอฐาน</item>
+        <item>ฑอนางมณโฑ</item>
+        <item>ฒอผู้เฒ่า</item>
+        <item>ณอเณร</item>
+        <item>ดอเด็ก</item>
+        <item>ตอเต่า</item>
+        <item>ถอถุง</item>
+        <item>ทอทหาร</item>
+        <item>ธอธง</item>
+        <item>นอหนู</item>
+        <item>บอใบไม้</item>
+        <item>ปอปลา</item>
+        <item>ผอผึ้ง</item>
+        <item>ฝอฝา</item>
+        <item>พอพาน</item>
+        <item>ฟอฟัน</item>
+        <item>ภอสำเภา</item>
+        <item>มอม้า</item>
+        <item>ยอยักษ์</item>
+        <item>รอเรือ</item>
+        <item>ลอลิง</item>
+        <item>วอแหวน</item>
+        <item>ศอศาลา</item>
+        <item>ษอฤาษี</item>
+        <item>สอเสือ</item>
+        <item>หอหีบ</item>
+        <item>ฬอจุฬา</item>
+        <item>อออ่าง</item>
+        <item>ฮอนกฮูก</item>
+    </string-array>
 </resources>

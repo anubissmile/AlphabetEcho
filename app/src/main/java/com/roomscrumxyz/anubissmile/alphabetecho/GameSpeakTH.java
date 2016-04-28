@@ -14,6 +14,7 @@ import java.util.ArrayList;
 
 public class GameSpeakTH extends AppCompatActivity {
 
+
     /**
      * OBJECT MEDIAPLAYER.
      */
@@ -38,7 +39,82 @@ public class GameSpeakTH extends AppCompatActivity {
                 data != null) {
             ArrayList<String> resultList = data.getStringArrayListExtra(RecognizerIntent.EXTRA_RESULTS);
 
-//            Toast.makeText(GameSpeakTH.this, resultList.get(0), Toast.LENGTH_LONG).show();
+//            Toast.makeText(GameSpeakTH.this, "Speech : " + resultList.get(0), Toast.LENGTH_LONG).show();
+
+            /**
+             * GET SPEECH & TEXT COMPARISION.
+             */
+            String[] alpha_chk1,alpha_chk2,alpha_chk3;
+            String res = resultList.get(0);
+
+            alpha_chk1 = getResources().getStringArray(R.array.alphabet_th);
+            alpha_chk2 = getResources().getStringArray(R.array.alphabet_th_speak);
+            alpha_chk3 = getResources().getStringArray(R.array.alphabet_th_speak2);
+
+//          Toast.makeText(GameSpeakTH.this, alpha_chk1[3], Toast.LENGTH_LONG).show();
+//          Toast.makeText(GameSpeakTH.this, alpha_chk2[3], Toast.LENGTH_LONG).show();
+//          Toast.makeText(GameSpeakTH.this, alpha_chk3[3], Toast.LENGTH_LONG).show();
+
+
+            /**
+             * GET INTENT.
+             */
+            Intent gIntent = getIntent();
+            int position = gIntent.getIntExtra("pos_ind", 100);
+            String dName,statusTxt = null;
+            int status_speech = 0;
+
+//            Toast.makeText(GameSpeakTH.this, "Position : " + Integer.toString(position), Toast.LENGTH_LONG).show();
+
+            if (res.equals(alpha_chk1[position]) || res.equals(alpha_chk2[position]) ||
+                    res.equals(alpha_chk3[position])) {
+//                Toast.makeText(GameSpeakTH.this, "Collect", Toast.LENGTH_LONG).show();
+                dName = "win_bell";
+                status_speech = 1;
+                statusTxt = "คุณออกเสียงดีมากไปข้ออื่นกันเล้ย!";
+            } else {
+//                Toast.makeText(GameSpeakTH.this, "Incollect", Toast.LENGTH_LONG).show();
+                dName = "wrong_buzzer";
+                status_speech = 2;
+                statusTxt = "คุณยังออกเสียงไม่ถูกต้องลองใหม่อีกครั้ง!";
+            }
+            /**
+             * MAKE OBJECT MEDIAPLAYER
+             */
+            if (mPlayer_th != null) {
+                /**
+                 * CHECK FOR MEDIA PLAYER STATUS.
+                 */
+                mPlayer_th.stop();
+                mPlayer_th.release();
+            }
+
+            /**
+             * CREATE MEDIAPLAYER ROUTE.
+             */
+            int rawID = getResources().getIdentifier("com.roomscrumxyz.anubissmile.alphabetecho:raw/" + dName,
+                    null, null);
+            mPlayer_th = MediaPlayer.create(this, rawID);
+            mPlayer_th.start();
+
+            /**
+             * MAKE SNACK BAR.
+             */
+            View mic = findViewById(R.id.mic);
+            final int finalStatus_speech = status_speech;
+
+            Snackbar.make(mic, statusTxt, Snackbar.LENGTH_INDEFINITE)
+                    .setAction("OK", new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                            if(finalStatus_speech == 1){
+                                GameSpeakTH.this.onBackPressed();
+                            }
+                        }
+                    })
+                    .setActionTextColor(Color.GREEN)
+                    .show();
+            //END OF SPEECH & TEXT COMPARISION.
 
         }
     }
@@ -49,14 +125,14 @@ public class GameSpeakTH extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_game_speak_th);
 
+
         /**
-        * GET INTENT.
-        */
+         * GET INTENT.
+         */
         Intent gIntent = getIntent();
         int position = gIntent.getIntExtra("pos_ind",100);
         position++;
         String dName = "t" + Integer.toString(position);
-//        Toast.makeText(ListeningTH.this, dName, Toast.LENGTH_SHORT).show();
 
         /**
          * UI OBJECT BINDING & SHOW IMAGE RESOURCE.
@@ -67,6 +143,7 @@ public class GameSpeakTH extends AppCompatActivity {
 
         //        int id = getResources().getIdentifier("yourpackagename:drawable/" + StringGenerated, null, null);
 
+//        Toast.makeText(ListeningTH.this, dName, Toast.LENGTH_SHORT).show();
         int id = getResources().getIdentifier("com.roomscrumxyz.anubissmile.alphabetecho:drawable/"+ dName,
                 null, null);
         alpha_logo.setImageResource(id);

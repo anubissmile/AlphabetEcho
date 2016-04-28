@@ -45,19 +45,17 @@ public class AlphabelListView extends AppCompatActivity {
         thArrList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-//                Toast.makeText(AlphabelListView.this,thStringArr[position] + " " + position,Toast.LENGTH_SHORT)
+//                Toast.makeText(AlphabelListView.this,thStringArr[position] + " " + position, Toast.LENGTH_SHORT)
 //                        .show();
-                final Intent newActivity;
+                Intent newActivity = null;
                 switch(gotoActivity){
-                    case 1:
+                    case 11:
                         newActivity = new Intent(AlphabelListView.this, ListeningTH.class);
-                        newActivity.putExtra("POSITION_INDEX", position);
-                        startActivity(newActivity);
+                        newActivity.putExtra("pos_ind", position);
                         break;
-                    case 2:
+                    case 22:
                         newActivity = new Intent(AlphabelListView.this, GameSpeakTH.class);
-                        newActivity.putExtra("POSITION_INDEX", position);
-                        startActivity(newActivity);
+                        newActivity.putExtra("pos_ind", position);
                         break;
                     default:
                         Snackbar.make(view,"มีบางอย่างผิดพลาด,เราต้องกลับไปหน้าเริ่มต้นใหม่",Snackbar.LENGTH_INDEFINITE)
@@ -71,6 +69,8 @@ public class AlphabelListView extends AppCompatActivity {
                                 .show();
                         break;
                 }
+
+                startActivity(newActivity);
             }
         });
 

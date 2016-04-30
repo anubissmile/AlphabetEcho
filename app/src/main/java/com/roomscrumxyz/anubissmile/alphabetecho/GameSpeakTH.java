@@ -132,7 +132,7 @@ public class GameSpeakTH extends AppCompatActivity {
         Intent gIntent = getIntent();
         int position = gIntent.getIntExtra("pos_ind",100);
         position++;
-        String dName = "t" + Integer.toString(position);
+        final String dName = "t" + Integer.toString(position);
 
         /**
          * UI OBJECT BINDING & SHOW IMAGE RESOURCE.
@@ -174,13 +174,17 @@ public class GameSpeakTH extends AppCompatActivity {
         /**
          * CREATE MEDIAPLAYER ROUTE.
          */
-        int rawID = getResources().getIdentifier("com.roomscrumxyz.anubissmile.alphabetecho:raw/"+ dName,
-                null, null);
-        mPlayer_th = MediaPlayer.create(this, rawID);
 
         alpha_logo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                int rawID = getResources().getIdentifier("com.roomscrumxyz.anubissmile.alphabetecho:raw/"+ dName,
+                        null, null);
+                if(mPlayer_th != null){
+                    mPlayer_th.stop();
+                    mPlayer_th.release();
+                }
+                mPlayer_th = MediaPlayer.create(GameSpeakTH.this, rawID);
                 mPlayer_th.start();
             }
         });

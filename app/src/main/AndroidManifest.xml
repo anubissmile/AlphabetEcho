@@ -39,7 +39,8 @@
         <activity android:name=".FirstPage" />
         <activity android:name=".AlphabelListView" />
         <activity android:name=".GameSpeakTH" />
-        <activity android:name=".ListeningTH"></activity>
+        <activity android:name=".ListeningTH" />
+        <activity android:name=".OurTeamActivity"></activity>
     </application>
 
 </manifest>

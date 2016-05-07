@@ -24,11 +24,11 @@ import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
 
-    private final static int REQUEST_VOICE_RECOGNITION = 10001;
 
     /**
      * METHOD FOR GOOGLE SPEECH RECOGNIZER.
      */
+    private final static int REQUEST_VOICE_RECOGNITION = 10001;
     private void callVoiceRecognition(){
         Intent intent = new Intent(RecognizerIntent.ACTION_RECOGNIZE_SPEECH);
         intent.putExtra(RecognizerIntent.EXTRA_LANGUAGE, "th-TH");

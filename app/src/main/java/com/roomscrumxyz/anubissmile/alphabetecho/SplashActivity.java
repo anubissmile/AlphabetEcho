@@ -1,10 +1,12 @@
 package com.roomscrumxyz.anubissmile.alphabetecho;
 
 import android.annotation.SuppressLint;
-import android.support.v7.app.ActionBar;
-import android.support.v7.app.AppCompatActivity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
+import android.os.Message;
+import android.support.v7.app.ActionBar;
+import android.support.v7.app.AppCompatActivity;
 import android.view.MotionEvent;
 import android.view.View;
 
@@ -13,6 +15,12 @@ import android.view.View;
  * status bar and navigation/system bar) with user interaction.
  */
 public class SplashActivity extends AppCompatActivity {
+
+    /**
+     * SET STATUS FOR SPLASH SCREEN.
+     */
+    public static final int REFRESH_SCREEN = 1;
+
     /**
      * Whether or not the system UI should be auto-hidden after
      * {@link #AUTO_HIDE_DELAY_MILLIS} milliseconds.
@@ -85,6 +93,11 @@ public class SplashActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        /**
+         * CALL SPLASH.
+         */
+        startSplash();
+
         super.onCreate(savedInstanceState);
 
         setContentView(R.layout.activity_splash);
@@ -110,6 +123,34 @@ public class SplashActivity extends AppCompatActivity {
         // while interacting with the UI.
         findViewById(R.id.dummy_button).setOnTouchListener(mDelayHideTouchListener);
     }
+
+
+    public void startSplash() {
+        new Thread() {
+            public void run() {
+                try{
+                    Thread.sleep(3500);
+                    hRefresh.sendEmptyMessage(REFRESH_SCREEN);
+                }catch(Exception e){
+                }
+            }
+        }.start();
+    }
+
+    Handler hRefresh = new Handler(){
+        public void handleMessage(Message msg) {
+            switch(msg.what){
+                case REFRESH_SCREEN:
+
+                    // Open ActivityForm2
+                    Intent newActivity = new Intent(SplashActivity.this,FirstPage.class);
+                    startActivity(newActivity);
+                    SplashActivity.this.finish();
+                    break;
+                default: break;
+            }
+        }
+    };
 
     @Override
     protected void onPostCreate(Bundle savedInstanceState) {

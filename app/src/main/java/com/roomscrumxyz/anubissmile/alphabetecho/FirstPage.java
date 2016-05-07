@@ -18,7 +18,8 @@ public class FirstPage extends AppCompatActivity {
          * UI OBJECT BINDING.
          */
         ImageButton listening_btn = (ImageButton) findViewById(R.id.listening_btn);
-        ImageButton speek_out_btn = (ImageButton) findViewById(R.id.speek_out_btn);
+        ImageButton speak_out_btn = (ImageButton) findViewById(R.id.speek_out_btn);
+        ImageButton our_team = (ImageButton) findViewById(R.id.our_team_btn);
 
         /**
          * SET INTENT
@@ -40,13 +41,21 @@ public class FirstPage extends AppCompatActivity {
         });
 
         //speek out button
-        speek_out_btn.setOnClickListener(new View.OnClickListener() {
+        speak_out_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Snackbar.make(v, "ไปฝึกการออกเสียงด้วยเกมส์กันเถอะ...", Snackbar.LENGTH_SHORT)
                         .setAction("Action",null).show();
                 newActivity.putExtra("GOTO", 22);
                 startActivity(newActivity);
+            }
+        });
+
+        our_team.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intentOurTeam = new Intent(FirstPage.this, OurTeamActivity.class);
+                startActivity(intentOurTeam);
             }
         });
 

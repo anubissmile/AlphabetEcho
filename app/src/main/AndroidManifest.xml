@@ -40,7 +40,8 @@
         <activity android:name=".AlphabelListView" />
         <activity android:name=".GameSpeakTH" />
         <activity android:name=".ListeningTH" />
-        <activity android:name=".OurTeamActivity"></activity>
+        <activity android:name=".OurTeamActivity"
+            android:label="@string/title_our_team"/>
     </application>
 
 </manifest>

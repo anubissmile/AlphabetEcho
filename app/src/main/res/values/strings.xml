@@ -8,7 +8,25 @@
     <string name="title_activity_fullscreen">FullscreenActivity</string>
     <string name="dummy_button">Dummy Button</string>
     <string name="dummy_content">DUMMY\nCONTENT</string>
-
+    <string name="title_our_team">รายชื่อผู้พัฒนา</string>
+    <string name="our_team_info">
+        แอพพลิเคชั่นสอนการออกเสียงพยัญชนะภาษาไทย\nALPHABET ECHO\n\nจัดทำโดยกลุ่ม Think Big\n\n
+    </string>
+    <string name="team1">
+    นายวีศรุต คุ้มวิไล \nรหัสนักศึกษา 55037153\n
+    (ส่วนรับผิดชอบ :เขียนโปรแกรม )\n\n
+    </string>
+    <string name="team2">
+    นายพณภท เจษฎาธรรมสถิต \nรหัสนักศึกษา 56045591\n
+    (ส่วนรับผิดชอบ : ออกแบบ แนวคิด ไอเดีย)\n\n
+    </string>
+    <string name="team3">
+        นางภัทรี ไชยชนันท \nรหัสนักศึกษา 55007682\n
+    (ส่วนรับผิดชอบ :ตกแต่งแอพ  ทำรูปเล่ม )\n\n
+    </string>
+    <string name="info2">
+        สาขาวิทยาการคอมพิวเตอร์และการพัฒนาแอพลิเคชั่น\nคณะเทคโนโลยีสารสนเทศและการสื่อสาร\nมหาวิทยาลัยศรีปทุม
+    </string>
     <string name="title_activity_splash">SplashActivity</string>
 
     <string name="title_activity_first_main">FirstMainActivity</string>

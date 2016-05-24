@@ -1,7 +1,9 @@
-package com.roomscrumxyz.anubissmile.alphabetecho;
+package com.roomscrumxyz.anubissmile.thaiecho;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+
+import com.roomscrumxyz.anubissmile.alphabetecho.R;
 
 public class OurTeamActivity extends AppCompatActivity {
 

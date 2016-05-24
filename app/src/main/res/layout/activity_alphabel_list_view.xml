@@ -7,7 +7,7 @@
     android:paddingLeft="0dp"
     android:paddingRight="0dp"
     android:paddingTop="0dp"
-    tools:context="com.roomscrumxyz.anubissmile.alphabetecho.AlphabelListView">
+    tools:context="com.roomscrumxyz.anubissmile.thaiecho.AlphabelListView">
 
     <ListView
         android:layout_width="wrap_content"

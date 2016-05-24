@@ -1,6 +1,7 @@
-package com.roomscrumxyz.anubissmile.alphabetecho;
+package com.roomscrumxyz.anubissmile.thaiecho;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.media.MediaPlayer;
 import android.os.Bundle;
@@ -10,10 +11,16 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.ImageView;
 
+import com.roomscrumxyz.anubissmile.alphabetecho.R;
+
 import java.util.ArrayList;
 
 public class GameSpeakTH extends AppCompatActivity {
 
+    /**
+     * SHARED PREFERENCE PROPERTY.
+     */
+    private String spName;
 
     /**
      * OBJECT MEDIAPLAYER.
@@ -71,12 +78,12 @@ public class GameSpeakTH extends AppCompatActivity {
 //                Toast.makeText(GameSpeakTH.this, "Collect", Toast.LENGTH_LONG).show();
                 dName = "win_bell";
                 status_speech = 1;
-                statusTxt = "คุณออกเสียงดีมากไปข้ออื่นกันเล้ย!";
+                statusTxt = "เยี่ยมมาก " + spName + "! ออกเสียงดีมากไปข้ออื่นกันเล้ย!";
             } else {
 //                Toast.makeText(GameSpeakTH.this, "Incollect", Toast.LENGTH_LONG).show();
                 dName = "wrong_buzzer";
                 status_speech = 2;
-                statusTxt = "คุณยังออกเสียงไม่ถูกต้องลองใหม่อีกครั้ง!";
+                statusTxt = spName + " ยังออกเสียงไม่ถูกต้อง \n กรุณาลองใหม่อีกครั้ง!";
             }
             /**
              * MAKE OBJECT MEDIAPLAYER
@@ -92,7 +99,7 @@ public class GameSpeakTH extends AppCompatActivity {
             /**
              * CREATE MEDIAPLAYER ROUTE.
              */
-            int rawID = getResources().getIdentifier("com.roomscrumxyz.anubissmile.alphabetecho:raw/" + dName,
+            int rawID = getResources().getIdentifier("com.roomscrumxyz.anubissmile.thaiecho:raw/" + dName,
                     null, null);
             mPlayer_th = MediaPlayer.create(this, rawID);
             mPlayer_th.start();
@@ -122,6 +129,13 @@ public class GameSpeakTH extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
+        /**
+         * GET SHARED PREFERENCE.
+         */
+        SharedPreferences sp = getSharedPreferences("setName", 0);
+        spName = sp.getString("Name", "").toString();
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_game_speak_th);
 
@@ -144,7 +158,7 @@ public class GameSpeakTH extends AppCompatActivity {
         //        int id = getResources().getIdentifier("yourpackagename:drawable/" + StringGenerated, null, null);
 
 //        Toast.makeText(ListeningTH.this, dName, Toast.LENGTH_SHORT).show();
-        int id = getResources().getIdentifier("com.roomscrumxyz.anubissmile.alphabetecho:drawable/"+ dName,
+        int id = getResources().getIdentifier("com.roomscrumxyz.anubissmile.thaiecho:drawable/"+ dName,
                 null, null);
         alpha_logo.setImageResource(id);
 
@@ -178,7 +192,7 @@ public class GameSpeakTH extends AppCompatActivity {
         alpha_logo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                int rawID = getResources().getIdentifier("com.roomscrumxyz.anubissmile.alphabetecho:raw/"+ dName,
+                int rawID = getResources().getIdentifier("com.roomscrumxyz.anubissmile.thaiecho:raw/"+ dName,
                         null, null);
                 if(mPlayer_th != null){
                     mPlayer_th.stop();

@@ -1,4 +1,4 @@
-package com.roomscrumxyz.anubissmile.alphabetecho;
+package com.roomscrumxyz.anubissmile.thaiecho;
 
 import android.content.Intent;
 import android.graphics.Color;
@@ -8,6 +8,8 @@ import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.ImageView;
+
+import com.roomscrumxyz.anubissmile.alphabetecho.R;
 
 public class ListeningTH extends AppCompatActivity {
 
@@ -36,7 +38,7 @@ public class ListeningTH extends AppCompatActivity {
 
 //        int id = getResources().getIdentifier("yourpackagename:drawable/" + StringGenerated, null, null);
 
-        int id = getResources().getIdentifier("com.roomscrumxyz.anubissmile.alphabetecho:drawable/"+ dName,
+        int id = getResources().getIdentifier("com.roomscrumxyz.anubissmile.thaiecho:drawable/"+ dName,
                 null, null);
         alpha_logo.setImageResource(id);
 
@@ -67,7 +69,7 @@ public class ListeningTH extends AppCompatActivity {
         /**
          * CREATE MEDIAPLAYER ROUTE.
          */
-        int rawID = getResources().getIdentifier("com.roomscrumxyz.anubissmile.alphabetecho:raw/"+ dName,
+        int rawID = getResources().getIdentifier("com.roomscrumxyz.anubissmile.thaiecho:raw/"+ dName,
                 null, null);
         mPlayer_th = MediaPlayer.create(this, rawID);
 

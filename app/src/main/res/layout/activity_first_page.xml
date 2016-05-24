@@ -8,7 +8,7 @@
     android:paddingRight="0dp"
     android:paddingTop="0dp"
     android:background="#7b7b9b"
-    tools:context="com.roomscrumxyz.anubissmile.alphabetecho.FirstPage">
+    tools:context="com.roomscrumxyz.anubissmile.thaiecho.FirstPage">
 
     <ImageView
         android:layout_width="match_parent"

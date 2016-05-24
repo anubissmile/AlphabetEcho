@@ -1,4 +1,4 @@
-package com.roomscrumxyz.anubissmile.alphabetecho;
+package com.roomscrumxyz.anubissmile.thaiecho;
 
 import android.content.Intent;
 import android.media.MediaPlayer;
@@ -19,6 +19,7 @@ import android.widget.Toast;
 import com.google.android.gms.appindexing.Action;
 import com.google.android.gms.appindexing.AppIndex;
 import com.google.android.gms.common.api.GoogleApiClient;
+import com.roomscrumxyz.anubissmile.alphabetecho.R;
 
 import java.util.ArrayList;
 

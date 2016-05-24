@@ -1,11 +1,14 @@
-package com.roomscrumxyz.anubissmile.alphabetecho;
+package com.roomscrumxyz.anubissmile.thaiecho;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.ImageButton;
+
+import com.roomscrumxyz.anubissmile.alphabetecho.R;
 
 public class FirstPage extends AppCompatActivity {
 
@@ -13,6 +16,10 @@ public class FirstPage extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_first_page);
+
+        SharedPreferences sp = getSharedPreferences("setName", 0);
+        String name = sp.getString("Name", "").toString();
+        setTitle("สวัสดี " + name);
 
         /**
          * UI OBJECT BINDING.

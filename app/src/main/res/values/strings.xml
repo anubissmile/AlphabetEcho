@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">ALPHABET ECHO</string>
+    <string name="app_name">THAI ECHO</string>
     <string name="action_settings">Settings</string>
     <string name="action_settings2">Info</string>
     <string name="spelling_btn">ฝึกการออกเสียง</string>
@@ -17,12 +17,16 @@
     (ส่วนรับผิดชอบ :เขียนโปรแกรม )\n\n
     </string>
     <string name="team2">
-    นายพณภท เจษฎาธรรมสถิต \nรหัสนักศึกษา 56045591\n
+    นายพัฒนพงษ์   เจริญรักษ์ปัญญา \nรหัสนักศึกษา 55017631\n
     (ส่วนรับผิดชอบ : ออกแบบ แนวคิด ไอเดีย)\n\n
     </string>
     <string name="team3">
         นางภัทรี ไชยชนันท \nรหัสนักศึกษา 55007682\n
-    (ส่วนรับผิดชอบ :ตกแต่งแอพ  ทำรูปเล่ม )\n\n
+    (ส่วนรับผิดชอบ :ตกแต่งแอพ หารูปภาพ)\n\n
+    </string>
+    <string name="team4">
+        นายรัตนไชย ทองคำ \nรหัสนักศึกษา 55023724\n
+    (ส่วนรับผิดชอบ :ตกแต่งแอพ แต่งภาพ)\n\n
     </string>
     <string name="info2">
         สาขาวิทยาการคอมพิวเตอร์และการพัฒนาแอพลิเคชั่น\nคณะเทคโนโลยีสารสนเทศและการสื่อสาร\nมหาวิทยาลัยศรีปทุม
@@ -170,4 +174,19 @@
         <item>อออ่าง</item>
         <item>ฮอนกฮูก</item>
     </string-array>
+    <string name="title_activity_login">Sign in</string>
+
+    <!-- Strings related to login -->
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password (optional)</string>
+    <string name="action_sign_in">Sign in or register</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="error_invalid_email">This email address is invalid</string>
+    <string name="error_invalid_password">This password is too short</string>
+    <string name="error_incorrect_password">This password is incorrect</string>
+    <string name="error_field_required">This field is required</string>
+    <string name="permission_rationale">"Contacts permissions are needed for providing email
+        completions."
+    </string>
+    <string name="title_activity_set_name">SetNameActivity</string>
 </resources>

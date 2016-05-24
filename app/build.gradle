@@ -5,7 +5,7 @@ android {
     buildToolsVersion "23.0.1"
 
     defaultConfig {
-        applicationId "com.roomscrumxyz.anubissmile.alphabetecho"
+        applicationId "com.roomscrumxyz.anubissmile.thaiecho"
         minSdkVersion 15
         targetSdkVersion 23
         versionCode 1

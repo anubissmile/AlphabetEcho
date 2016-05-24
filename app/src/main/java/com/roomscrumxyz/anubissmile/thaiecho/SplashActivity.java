@@ -1,4 +1,4 @@
-package com.roomscrumxyz.anubissmile.alphabetecho;
+package com.roomscrumxyz.anubissmile.thaiecho;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
@@ -9,6 +9,8 @@ import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.view.MotionEvent;
 import android.view.View;
+
+import com.roomscrumxyz.anubissmile.alphabetecho.R;
 
 /**
  * An example full-screen activity that shows and hides the system UI (i.e.
@@ -143,7 +145,7 @@ public class SplashActivity extends AppCompatActivity {
                 case REFRESH_SCREEN:
 
                     // Open ActivityForm2
-                    Intent newActivity = new Intent(SplashActivity.this,FirstPage.class);
+                    Intent newActivity = new Intent(SplashActivity.this,SetNameActivity.class);
                     startActivity(newActivity);
                     SplashActivity.this.finish();
                     break;
